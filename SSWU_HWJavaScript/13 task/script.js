@@ -14,15 +14,13 @@ const validateInput = () => {
       word = word.toLowerCase();
     }
     word = word.replace(
-          /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g,
-          '[contacts forbidden]'
-        );
+      /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g,
+      '[contacts forbidden]'
+    );
     word = word.replace(
       /^((ftp|http|https):\/\/)?(www\.)?([A-Za-zА-Яа-я0-9]{1}[A-Za-zА-Яа-я0-9\-]*\.?)*\.{1}[A-Za-zА-Яа-я0-9-]{2,8}(\/([\w#!:.?+=&%@!\-\/])*)?/gi,
       '[link forbidden]'
     ); //регулярку брав на https://regexr.com/
-
-    
 
     if (/^\d{3,}$/.test(word)) {
       continue;
