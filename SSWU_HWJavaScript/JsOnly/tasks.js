@@ -6,10 +6,10 @@ const _ = require('lodash');
 та негативні числа. Якщо масив порожній або має 1 значення, поверніть нуль.
 Спочатку масив буде поданий у невідсортованому вигляді.*/
 
-// const maxMinusMin = (array) => {
-//   const sortedArr = array.sort((a, b) => b - a);
-//   return array.length > 1 ? sortedArr[0] - sortedArr.at(-1) : 0;
-// };
+const maxMinusMin = (array) => {
+  const sortedArr = array.sort((a, b) => b - a);
+  return array.length > 1 ? sortedArr[0] - sortedArr.at(-1) : 0;
+};
 
 //console.log(maxMinusMin([1, 2, 3, -4]));
 
@@ -22,8 +22,8 @@ const maxMinusMin_lodash = (arr) => {
 /*2 Напишіть функцію, яка приймає рядок і число. Поверніть у вигляді
 масиву тільки ті слова, довжина яких перевищує число.*/
 
-// const moreThan = (str, num) =>
-//   str.split(' ').filter((word) => word.length > num);
+const moreThan = (str, num) =>
+  str.split(' ').filter((word) => word.length > num);
 
 // console.log(moreThan('Я люблю джс', 4));
 
@@ -65,7 +65,7 @@ const averages_lodash = (arr) => {
   return _.map(pairs, (pair) => _.mean(pair));
 };
 
-console.log(averages_lodash([1, 3, 5, 1, -10]));
+// console.log(averages_lodash([1, 3, 5, 1, -10]));
 /*5 Створіть функцію, яка приймає рядок і повертає кількість (кількість)
 голосних, які у ній.*/
 
@@ -82,9 +82,9 @@ const removeABC = (str) => {
 
 const difference = (arr1, arr2) => [...new Set([...arr1, ...arr2])];
 
-//console.log(difference([1, 2, 3, 4], [3, 4, 5, 6]));
+// console.log(difference([1, 2, 3, 4], [3, 4, 5, 6]));
 
-const difference_lodash = (arr1, arr2) => _.xor(arr1, arr2);
+const difference_lodash = (arr1, arr2) => _.union(arr1, arr2);
 
 // console.log(difference_lodash([1, 2, 3, 4], [3, 4, 5, 6]));
 /*7 Напишіть функцію, щоб отримати копію об'єкта, де ключі стали
